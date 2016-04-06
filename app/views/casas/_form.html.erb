@@ -1,0 +1,61 @@
+<%= form_for(@casa) do |f| %>
+  <% if @casa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@casa.errors.count, "error") %> prohibited this casa from being saved:</h2>
+
+      <ul>
+      <% @casa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :colonia %><br>
+    <%= f.text_field :colonia %>
+  </div>
+  <div class="field">
+    <%= f.label :calle %><br>
+    <%= f.text_field :calle %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_casa %><br>
+    <%= f.number_field :numero_casa %>
+  </div>
+  <div class="field">
+    <%= f.label :superficie_terreno %><br>
+    <%= f.text_field :superficie_terreno %>
+  </div>
+  <div class="field">
+    <%= f.label :superficie_construccion %><br>
+    <%= f.text_field :superficie_construccion %>
+  </div>
+  <div class="field">
+    <%= f.label :banos %><br>
+    <%= f.text_field :banos %>
+  </div>
+  <div class="field">
+    <%= f.label :recamaras %><br>
+    <%= f.number_field :recamaras %>
+  </div>
+  <div class="field">
+    <%= f.label :cochera %><br>
+    <%= f.check_box :cochera %>
+  </div>
+  <div class="field">
+    <%= f.label :jardin %><br>
+    <%= f.check_box :jardin %>
+  </div>
+  <div class="field">
+    <%= f.label :precio %><br>
+    <%= f.text_field :precio %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
